@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD><TITLE>IEEE Winter Task</TITLE>
+		<style>
+			body {
+				font-family:Comic Sans MS; 
+				background-color:#2f2759;
+				//background-image:url("https://0701.static.prezi.com/preview/v2/znivtq4ep5dbnusgb3lyfy2jp76jc3sachvcdoaizecfr3dnitcq_3_0.png");
+				background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx9fPvKisVtu9E7NZDPb96tT3QwpKvUn7By51dc0muexcfsntI&s");
+				//background-repeat:no-repeat;
+				//background-size : cover;
+				display : relative;
+				}
+			h1 {	
+				color:#3b6db4;
+				border:2px solid yellow;
+				border-radius:8px;
+				margin-left:500px;
+				margin-right:500px;
+				text-align:center;
+
+				}
+			p  {	color:#3b6db4;
+				text-align: center;
+				border :2px solid #ffcc99;
+				border-radius:8px;
+				padding : 10px;
+				margin : 10px 200px;
+				}
+			form {
+				margin : 0 auto;
+				border : 2px solid #ffff33;
+				border-radius : 8px;
+				width : 600px;
+				background-color: powderblue;
+				
+				
+				}
+			input[type="text"],select,input[type="number"]{
+				margin-left:40px;
+				border : 2px solid #ffcc99;
+				border-radius:8px;
+				padding : 7px;
+				width: 250px;
+				}
+			input[type="submit"],input[type="reset"]{
+				background-color:#4CAF50;
+				border : none;
+				color : white;
+				margin : 4px 2px;
+				padding : 16px 32px;
+				text-decoration:none;
+				}	
+			input[type="submit"]:hover,input[type="reset"]:hover{background-color:#c0c0c0;}		
+			h4{
+				margin-left:40px;
+				}
+			#Semester {
+				margin-left:300;
+				}
+			ul {
+				  list-style-type: none;
+				  margin: 0;
+  				  padding: 0;
+  				  overflow: hidden;
+  				  background-color: green;
+				  position : -webkit-sticky;
+				  position: sticky;
+				  top : 0;
+					opacity : 0.8;
+				}
+
+			li {
+				  float: left;
+				  
+				}
+
+			li a {
+  				display: block;
+  				color: white;
+  				text-align: center;
+  				padding: 14px 16px;
+  				text-decoration: none;
+				
+				}
+
+			li a:hover {
+  				background-color: #c0c0c0;
+				font-weight: bold;
+				
+
+				}
+			.active {
+ 				 background-color: #4CAF50;
+					}
+			h3 {text-align:center;
+				color:#ffcc99 ;
+				text-decoration:underline;	
+					}
+			h2 {text-align:center;}
+			footer {
+					color:powderblue;
+					text-align:right;
+				}
+		</style> 
+	</HEAD>
+<BODY>
+<H1 id ="home">Welcome To IEEE website</H1>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#form">Form</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+<br>
+<center><img src="https://0701.static.prezi.com/preview/v2/znivtq4ep5dbnusgb3lyfy2jp76jc3sachvcdoaizecfr3dnitcq_3_0.png" style="height:200px; width:400px;" alt="IEEE SBM"></center><br>
+
+
+<hr id="form" style="margin-top:5px;" width=70% size=2 color="pink"><br><br>
+
+<form action="https://github.com/AbhiSri7/IEEE_Winter_WebDev.git" method="POST">
+<h2 > Winter Task Form</h2>
+<h4>Name:</h4>  
+<input type="text" name="name" placeholder="Enter Your Name"><br>
+
+
+<h4>College:</h4>
+<select id="Colleges" onclick="Selection()">
+                <option value="Kasturba Medical College" selected>Kasturba Medical College</option>
+		<option value="Manipal Institute Of Technology">Manipal Institute Of Technology</option>
+		<option value="Manipal University Jaipur">Manipal University Jaipur</option>
+		<option value="Manipal Center for Information Science">Manipal Center for Information Science</option>
+                <option value="Manipal Centre for European Studies">Manipal Centre for European Studies</option>
+                <option value="Manipal Centre for Philosophy and Humanities">Manipal Centre for Philosophy and Humanities</option>
+                <option value="Manipal College of Allied Health Sciences">Manipal College of Allied Health Sciences</option>
+                <option value="Manipal College of Dental Sciences">Manipal College of Dental Sciences</option>
+                <option value="Manipal College of Pharmaceutical Sciences">Manipal College of Pharmaceutical Sciences</option>
+                <option value="Manipal Institute of Management">Manipal Institute of Management</option>
+                <option value="Manipal School of Architecture and Planning">Manipal School of Architecture and Planning</option>
+                <option value="Manipal Life Sciences Centre">Manipal Life Sciences Centre</option>
+                <option value="Welcomgroup Graduate School of Hotel Administration">Welcomgroup Graduate School of Hotel Administration</option>
+</select>
+
+<div id="reg" style="display:none">
+<h4>Registration Number:</h4>  
+<input type="number" name="RegNo" placeholder="Enter Registration Number"><br>
+</div>
+	<script>	
+		function Selection()
+	{ var val = document.getElementById("Colleges").value;
+		if(val =="Manipal Institute Of Technology")
+			{document.getElementById('reg').style.display='block';}
+		else{document.getElementById('reg').style.display='none';}
+	}
+	
+		
+
+
+	
+	</script>
+<h4>Semester:</h4> 
+<select id="Semester" size="1">
+	<option value="1">1st</option>
+	<option value="2">2nd</option>
+	<option value="3">3rd</option>
+	<option value="4">4th</option>
+	<option value="5">5th</option>
+	<option value="6">6th</option>
+	<option value="7">7th</option>
+	<option value="8">8th</option>
+</select>
+
+<br><br><br><br> 
+
+<input type="submit" style="margin-left:250px;" value="Submit"><br>
+<input type="reset" style="margin-left:253px; margin-top:5px"><br>
+</form>
+
+
+<hr id="about" style="margin-top:50px;" width=70% size=2 color="pink"><br><br>
+</form>
+	<h3>About IEEE</h3> 
+<p ><br>IEEE, an association dedicated to advancing innovation and technological excellence for the benefit of humanity, is the world's largest technical professional society. It is designed to serve professionals involved in all aspects of the electrical, electronic, and computing fields and related areas of science and technology that underlie modern civilization.
+IEEE's roots go back to 1884 when electricity began to become a major influence in society. There was one major established electrical industry, the telegraph, which since the 1840s had come to connect the world with a data communications system faster than the speed of transportation. The telephone and electric power and light industries had just gotten underway.<br>
+<br></p>
+
+<h3>Foundaton of IRE</h3>
+<p>
+A new industry arose, beginning with Guglielmo Marconi’s wireless telegraphy experiments in 1895-1896. What was originally called “wireless” telegraphy became radio with the electrical amplification possibilities inherent in the vacuum tubes that evolved from John Fleming’s diode and Lee de Forest’s triode. With the new industry came a new society in 1912, the Institute of Radio Engineers.The IRE was modeled on the AIEE but was devoted to radio, and then broadly to electronics. It also furthered its profession by linking members through publications, standards, and conferences and encouraging them to organize local sections and meetings to exchange information and ideas.
+</p>
+
+<h3>Foundation of AIEE</h3>
+
+<p>In the spring of 1884, a small group of individuals in the electrical professions met in New York, USA. They formed a new organization to support professionals in their nascent field and to aid them in their efforts to apply innovation for the betterment of humanity—the American Institute of Electrical Engineers, or AIEE for short. That October, the AIEE held its first technical meeting in Philadelphia, PA, USA. Many early leaders, such as founding President Norvin Green of Western Union, came from telegraphy. Others, such as Thomas Edison, came from power, while Alexander Graham Bell represented the telephone industry. Electric power spread rapidly, enhanced by innovations such as AC induction motors, long-distance AC transmission, and larger power plants. Companies such as AEG, General Electric, Siemens & Halske, and Westinghouse underwrote its commercialization. The AIEE became increasingly focused on electrical power and its ability to change people’s lives through the unprecedented products and services it could deliver. There was a secondary focus on wired communication, both the telegraph and the telephone. Through technical meetings, publications, and promotion of standards, the AIEE led the growth of the electrical engineering profession, while through local sections and student branches, it brought its benefits to engineers in widespread places.
+</p>
+<hr id="about" style="margin-top:50px;" width=70% size=2 color="pink">
+
+<br><br><br><br><br><br><br><br>
+	<Footer id="contact">
+		<h4><i>Designed by : Konteya Sharma<br>
+		       Phone Number: 9602561921<br>
+	      	       GitHub ID : Konteya<br>
+		       Source : www.ieee.org</i></h4>
+		
+	</Footer>
+
+</BODY>
+</HTML>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD><TITLE>IEEE Winter Task</TITLE>
+		<style>
+			body {
+				font-family:Comic Sans MS; 
+				background-color:#2f2759;
+				background-image:url("https://www.flysas.com/content/dam/sas/images/fleet/fleet_airbus_new-livery_rear_1600x1000.jpg");
+				//background-repeat:no-repeat;
+				background-size : cover;
+				display : relative;
+				}
+			h1 {	
+				color:#4b4f6b;
+				/* border:1px solid yellow;
+				border-radius:8px;
+				margin-left:500px;
+				margin-right:500px;*/
+				text-align:center;
+				}
+			p  {	color:#3b6db4;
+				text-align: center;
+				//border :2px solid #ffcc99;
+				border-radius:8px;
+				padding : 10px;
+				margin : 10px 200px;
+				}
+			form {
+				margin : 0 auto;
+				border : 2px solid #ffff33;
+				border-radius : 8px;
+				width : 600px;
+				//background-color: powderblue;
+				
+				}
+			input[type="text"],select,input[type="number"]{
+				margin-left:40px;
+				border : 2px solid #ffcc99;
+				border-radius:8px;
+				padding : 7px;
+				width: 250px;
+				}
+			input[type="submit"],input[type="reset"]{
+				background-color:#4CAF50;
+				border : none;
+				color : white;
+				margin : 4px 2px;
+				padding : 16px 32px;
+				text-decoration:none;
+				}	
+			input[type="submit"]:hover,input[type="reset"]:hover{background-color:#c0c0c0;}		
+			h4{
+				margin-left:40px;
+				}
+			#pass {
+				margin-left:300;
+				}
+			ul {
+				  list-style-type: none;
+				  margin: 0;
+  				  padding: 0;
+  				  overflow: hidden;
+  				  background: linear-gradient(to bottom right, #66ffff 19%, #3399ff 100%);
+				  position : -webkit-sticky;
+				  position: sticky;
+				  top : 0;
+				}
+
+			li {
+				  float: left;
+				}
+
+			li a {
+  				display: block;
+  				color: white;
+  				text-align: center;
+  				padding: 14px 16px;
+  				text-decoration: none;
+				}
+
+			li a:hover {
+  				background-color: #c0c0c0;
+				cursor:pointer;
+
+				}
+			.active {
+ 				 background-color: #4CAF50;
+					}
+			h3 {text-align:center;
+				color:#ffcc99 ;
+				text-decoration:underline;	
+					}
+			h2 {text-align:center;}
+			footer {
+					color:powderblue;
+					text-align:right;
+				}
+			#path :hover{background: linear-gradient(to bottom right, #66ffff 19%, #3399ff 100%);
+				cursor:auto	;
+				}
+			#btn {
+				border : 1px solid #00ffff;
+				background: linear-gradient(to right, #00ffff 0%, #6699ff 100%);
+				padding : 10px;
+				text-align : center;
+				opacity:0.6;
+				transition:0.3s;
+				}
+			#btn:hover {
+				opacity:1;
+				font-size : 100%;
+				cursor : pointer;
+				}
+			a {text-decoration:none;}
+			a:hover{
+				font-size : 100%;
+				cursor : pointer;
+				}
+		</style> 
+	</HEAD>
+<BODY>
+<H1>Fly Infinity</H1>
+<ul>
+  <li><a href="C:\Users\Asus\Desktop\WebDev work\welcome.html">Home</a></li>
+  <li id="path"><a>---></a></li>
+  <li><a>Book</a></li>
+
+</ul>
+<br>
+
+
+<hr id="form" style="margin-top:5px;" width=70% size=2 color="pink"><br><br>
+
+<form name="info" method="POST">
+<h2>Passenger Details</h2>
+<h4>First Name:</h4>  
+<input type="text" name="name" placeholder="Enter First Name"><br>
+<h4>Last Name:</h4>  
+<input type="text" name="name" placeholder="Enter last Name"><br>
+<h4> Select flight :</h4>
+<select id="Semester" size="1">
+	<option value="11">JAI-DEL</option>
+	<option value="22">DEL-BOM</option>
+	<option value="33">DEL-CHE</option>
+	<option value="44">BOM-CHE</option>
+	<option value="55">BLR-BOM</option>
+	<option value="66">BOM-DXB</option>
+	<option value="77">DEL-TPE</option>
+	<option value="88">DEL-KOL</option>
+	<option value="99">DEL-IXE</option>
+	<option value="10">DEL-IXE</option>
+</select>
+
+<h4>Number of Passengers:</h4> 
+<select id="pass" size="1">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+</select><br><br>
+
+<h4>PNR:</h4>  
+<input type="text" name="PNR" placeholder="PNR" disabled><br>	
+<br><br> </form>
+<p align="center"><button id="btn" onClick="pnr()">Generate PNR</button></p>
+
+
+<script>
+	function pnr()
+	{
+		var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ";
+		var str_len= 6;
+		var randomstr= '';
+		for(var i=0; i<str_len; i++)
+				{var rnum=Math.floor(Math.random() * chars.length);
+				 randomstr += chars.substring(rnum,rnum+1);	
+				}
+		
+	document.info.PNR.value = randomstr;
+
+			}
+
+</script>
+<p align="left"><button id="btn"><a href="C:\Users\Asus\Desktop\WebDev work\Boarding.html">Boarding pass</a></button></p>
+<hr id="about" style="margin-top:50px;" width=70% size=2 color="pink"><br><br>
+
+
+
+</BODY>
+</HTML>
